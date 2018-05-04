@@ -1,0 +1,35 @@
+{
+  "name": "mypackage",
+  "version": "1.0.0",
+  "description": "testpackage",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "piers rueb",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^1.0.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-inject": "^4.3.2",
+    "gulp-inject-file": "0.0.19",
+    "gulp-minify": "^2.1.0",
+    "gulp-modernizr": "^1.0.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-style-inject": "^0.1.1",
+    "gulp-tinypng-compress": "^1.2.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-open": "^2.1.0",
+    "pump": "^2.0.0"
+  }
+}

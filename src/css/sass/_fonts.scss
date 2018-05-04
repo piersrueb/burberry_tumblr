@@ -1,0 +1,21 @@
+/*FONTS*/
+@font-face {
+    font-family: 'BAB';
+    src: url('https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Regular.woff2') format('woff2'),
+    url('https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Regular.woff') format('woff'),
+    url('https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BAB-bold';
+    src: url('https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Bold.woff2') format('woff2'),
+    url('https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Bold.woff') format('woff'),
+    url('https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.BAB-font, h3, nav#BAB-font > ul > li > a {
+    font-family: BAB-bold, Helvetica, HiraKakuProN-W3, STHeitiSC-Medium, 'Nanum Gothic', Meiryo, ArialUnicodeMS, 'MS P Gothic', sans-serif, clean;
+}

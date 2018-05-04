@@ -1,0 +1,178 @@
+<html>
+    <head>
+        {block:indexpage}
+            <title>Burberry Beauty</title>
+        {/block:indexpage}
+        {block:permalinkpage}
+            <title>Burberry Post</title>
+        {/block:permalinkpage}
+        <link rel="shortcut icon" href="https://uk.burberry.com/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        <style>
+            /* injected css starts */
+			<!-- inject: css/style.css -->
+            /* injected css ends */
+		</style>
+    </head>
+    <body>
+        {block:indexpage}
+            <header id="header">
+                <h1>BURBERRY<br/>BEAUTY</h1>
+            </header>
+            <div id="menu-btn">MENU</div>
+            <div id="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <aside id="menu">
+                <nav>
+                    <a data-tooltip="https://78.media.tumblr.com/e8760d390afe664fe32731baecfb7d7e/tumblr_p87i5uAekl1xrndz7o1_500.jpg" href="https://uk.burberry.com/make-up-runway-look/" target="_blank">THE RUNWAY COLLECTION</a>
+                    <a data-tooltip="https://78.media.tumblr.com/b9ca6b9c25ec410d7efa33539dda15af/tumblr_p5yaya9c2B1w16choo1_400.gif" href="https://uk.burberry.com/my-burberry/" target="_blank">MY BURBERRY BLUSH</a>
+                    <a data-tooltip="https://78.media.tumblr.com/c88494490b41b31673340dc74528eaac/tumblr_otcccy91uN1w16choo1_1280.gif" href="https://uk.burberry.com/cat-eye-make-up/" target="_blank">CAT EYES</a>
+                    <a data-tooltip="https://78.media.tumblr.com/eb3e9c6837527036436dd2e0c1066df2/tumblr_ozd6sbHemb1w16choo1_1280.gif" href="https://uk.burberry.com/make-up/" target="_blank">BEAUTY</a>
+                </nav>
+            </aside>
+            <div id="tooltip"></div>
+            <div id="large-caption"></div>
+        {/block:indexpage}
+        {block:permalinkpage}
+            <div id="close">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+            </div>
+        {/block:permalinkpage}
+        <main id="posts">
+            {block:Posts}
+
+                {block:Text}
+                    <article class="post text {TagsAsClasses}">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+                        {Body}
+                    </article>
+                {/block:Text}
+
+                {block:Photo}
+                    {block:indexpage}
+                        <article class="post photo draggable {TagsAsClasses}">
+                            {LikeButton}
+                            {ReblogButton}
+                            <a href="{Permalink}">
+                                <img class="post-image {TagsAsClasses}" data-caption="{block:Caption}{Caption}{/block:Caption}" src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                            </a>
+                        </article>
+                    {/block:indexpage}
+                    {block:permalinkpage}
+                        <article class="permalink-post single large">
+                            <img data-caption="{block:Caption}{Caption}{/block:Caption}" src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                        </article>
+                    {/block:permalinkpage}
+                {/block:Photo}
+
+                {block:Photoset}
+                    <article class="post photoset {TagsAsClasses}">
+                        {LikeButton}
+                        {ReblogButton}
+                        {Photoset-500}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </article>
+                {/block:Photoset}
+
+                {block:Quote}
+                    <article class="post quote draggable {TagsAsClasses}">
+                        {LikeButton}
+                        {ReblogButton}
+                        &ldquo;{Quote}&rdquo;
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                    </article>
+                {/block:Quote}
+
+                {block:Link}
+                    <article class="post link {TagsAsClasses}">
+                        {LikeButton}
+                        {ReblogButton}
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </article>
+                {/block:Link}
+
+                {block:Chat}
+                    <article class="post chat {TagsAsClasses}">
+                        {LikeButton}
+                        {ReblogButton}
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                    </article>
+                {/block:Chat}
+
+                {block:Video}
+                    <article class="post video {TagsAsClasses}">
+                        {LikeButton}
+                        {ReblogButton}
+                        {Video-500}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </article>
+                {/block:Video}
+
+                {block:Audio}
+                    <article class="post audio {TagsAsClasses}">
+                        {LikeButton}
+                        {ReblogButton}
+                        {AudioPlayerBlack}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </article>
+                {/block:Audio}
+
+            {/block:Posts}
+
+        </main>
+        <footer>
+            {block:Pagination}
+                <p>
+                {block:PreviousPage}<a href="{PreviousPage}">&larr; {lang:Previous}</a>{/block:PreviousPage}
+                {block:IfEnableJumpPagination}
+                    {block:JumpPagination length="5"}
+                        {block:CurrentPage}
+                            <span>{PageNumber}</span>
+                        {/block:CurrentPage}
+                        {block:JumpPage}
+                            <a href="{URL}">{PageNumber}</a>
+                        {/block:JumpPage}
+                    {/block:JumpPagination}
+                {/block:IfEnableJumpPagination}
+                {block:NextPage}<a class="pagination__next" href="{NextPage}">{lang:Next page} &rarr;</a>{/block:NextPage}
+                </p>
+            {/block:Pagination}
+        </footer>
+        <script>
+            //  injected js starts
+            <!-- inject: js/scripts.js-->
+            //  injected js ends
+        </script>
+    </body>
+</html>

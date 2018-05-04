@@ -1,0 +1,681 @@
+/*FONTS*/
+@font-face {
+    font-family: 'BAB';
+  src: url("https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Regular.woff2") format("woff2"), url("https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Regular.woff") format("woff"), url("https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'BAB-bold';
+  src: url("https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Bold.woff2") format("woff2"), url("https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Bold.woff") format("woff"), url("https://common.static.burberry.com/fonts/v4/BurberryApercuBespoke/BurberryApercuBespoke-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.BAB-font, h3, nav#BAB-font > ul > li > a {
+    font-family: BAB-bold, Helvetica, HiraKakuProN-W3, STHeitiSC-Medium, 'Nanum Gothic', Meiryo, ArialUnicodeMS, 'MS P Gothic', sans-serif, clean;
+}
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+figcaption, figure, main {
+    display: block;
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: inherit;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background-color: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+audio,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+img {
+    border-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+  /* 3 */
+    white-space: normal;
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+details,
+menu {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+canvas {
+    display: inline-block;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+#spinner {
+    opacity: 0;
+    position: fixed;
+    z-index: 1001;
+    right: 40px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+#spinner .double-bounce1, #spinner .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #229bfc;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+#spinner .double-bounce2 {
+    background-color: #ca2756;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0);
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+body {
+    font-family: "BAB", Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+header {
+    width: 100%;
+    height: 500px;
+}
+
+@media all and (max-height: 800px) {
+    header {
+        height: 300px;
+    }
+}
+
+header h1 {
+    font-family: "BAB-bold", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 150px;
+    letter-spacing: 10px;
+    line-height: 200px;
+    text-align: center;
+    margin: 0;
+    padding: 60px 0 0 0;
+}
+
+@media all and (max-width: 960px) {
+    header h1 {
+        font-size: 100px;
+        line-height: 150px;
+        padding: 100px 0 0 0;
+    }
+}
+
+@media all and (max-width: 728px) {
+    header h1 {
+        font-size: 75px;
+        line-height: 125px;
+        padding: 160px 0 0 0;
+    }
+}
+
+@media all and (max-width: 568px) {
+    header h1 {
+        font-size: 50px;
+        line-height: 75px;
+        padding: 200px 0 0 0;
+    }
+}
+
+header h1:hover {
+    -webkit-animation-name: colorStrobe;
+    animation-name: colorStrobe;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-timing-function: step-start;
+    animation-timing-function: step-start;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes colorStrobe {
+    0% {
+        color: #ca2756;
+    }
+
+    25% {
+        color: #ec662f;
+    }
+
+    50% {
+        color: #eda928;
+    }
+
+    75% {
+        color: #229bfc;
+    }
+
+    100% {
+        color: #666666;
+    }
+}
+
+@keyframes colorStrobe {
+    0% {
+        color: #ca2756;
+    }
+
+    25% {
+        color: #ec662f;
+    }
+
+    50% {
+        color: #eda928;
+    }
+
+    75% {
+        color: #229bfc;
+    }
+
+    100% {
+        color: #666666;
+    }
+}
+
+#menu-btn {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    font-family: "BAB-bold", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+    cursor: pointer;
+    text-shadow: 1px 1px 0px #fff;
+    z-index: 999;
+}
+
+aside {
+    width: 320px;
+    position: fixed;
+    top: 120px;
+    left: -320px;
+    z-index: 999;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+aside nav a {
+    font-family: "BAB-bold", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: block;
+    margin: 0;
+    padding: 0 0 40px 40px;
+    color: #000;
+    text-decoration: none;
+}
+
+.active {
+    left: 0 !important;
+}
+
+#large-caption {
+    position: fixed;
+    z-index: 999;
+    left: 50px;
+    bottom: 50px;
+    font-family: "BAB-bold", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 2px;
+    color: red;
+}
+
+#large-caption p {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+@media all and (max-width: 728px) {
+    #large-caption {
+        display: none;
+    }
+}
+
+#tooltip {
+    position: fixed;
+    width: 250px;
+    margin: 0;
+    background: #fff;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    z-index: 600;
+}
+
+#tooltip img {
+    max-width: 100%;
+    display: block;
+}
+
+.show {
+    opacity: 1 !important;
+}
+
+#close {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+#close .line {
+    width: 4px;
+    height: 30px;
+    position: absolute;
+    background: #000;
+}
+
+#close .line-1 {
+    top: 0;
+    left: 15px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#close .line-2 {
+    top: 0;
+    left: 15px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+main {
+    width: -webkit-calc(100% - 80px);
+    width: calc(100% - 80px);
+    margin: 20px 40px 0 40px;
+}
+
+main article.post {
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+    margin-bottom: 50px;
+    z-index: 499;
+    width: 200px;
+}
+
+main article.post .like_button, main article.post .reblog_button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+main article.post .reblog_button {
+    left: 60px;
+}
+
+main article.post img {
+    width: 100%;
+}
+
+main article.post:hover .like_button, main article.post:hover .reblog_button {
+    opacity: 1;
+}
+
+main article.quote {
+    z-index: 500;
+}
+
+main article.quote .like_button, main article.quote .reblog_button {
+    right: 20px;
+    left: auto;
+}
+
+main article.quote .reblog_button {
+    right: 60px;
+    left: auto;
+}
+
+main article.permalink-post {
+    margin: 10% auto 40px auto;
+}
+
+main article.permalink-post img {
+    width: 100%;
+}
+
+main article.quote {
+    font-family: "BAB-bold", Helvetica, Arial, sans-serif;
+    color: red;
+    font-size: 32px;
+    line-height: 1.4em;
+}
+
+main article.quote .source {
+    font-family: "BAB", Helvetica, Arial, sans-serif;
+    color: #000;
+    font-size: 14px;
+    padding: 10px 0 0 0;
+}
+
+main article.small {
+    width: 200px !important;
+}
+
+@media all and (max-width: 728px) {
+    main article.small {
+        width: 100% !important;
+        padding: 0 10px;
+    }
+}
+
+main article.medium {
+    width: 400px !important;
+}
+
+@media all and (max-width: 728px) {
+    main article.medium {
+        width: 100% !important;
+        padding: 0 10px;
+    }
+}
+
+main article.large {
+    width: 600px !important;
+}
+
+@media all and (max-width: 728px) {
+    main article.large {
+        width: 100% !important;
+        padding: 0 10px;
+    }
+}
+
+main img.essentials17cursor {
+    cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/ESSENTIALS.png), auto !important;
+}
+
+main img.llv17cursor {
+    cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/LIPVELVET.png), auto !important;
+}
+
+main img.septshow17cursor {
+    cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/SEPTEMBERSHOW.png), auto !important;
+}
+
+main img.febshow17cursor {
+    cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/FEBCOLLECTION.png), auto !important;
+}
+
+main img.cateye17cursor {
+    cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/CATEYE.png), auto !important;
+}
+
+main img.blushcursor {
+    cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/BLUSH.png), auto !important;
+}
+
+main img.freshglowcursor {
+    cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/FRESHGLOW18.png), auto !important;
+}
+
+main img.febshow18cursor {
+    cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/WANTCURSOR.png), auto !important;
+}
+
+main img.lipcrushcursor {
+    cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LIPCRUSH3.png), auto !important;
+}
+
+footer .pagination__next {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}

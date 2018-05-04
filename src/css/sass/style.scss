@@ -1,0 +1,292 @@
+//  import
+//  add CSS modules as needed
+
+@import 'fonts';
+@import 'reset';
+@import 'loader';
+
+//  Variables
+
+$hf: 'BAB-bold', Helvetica, Arial, sans-serif;
+$bf: 'BAB', Helvetica, Arial, sans-serif;
+$pc: #fff;
+$sc: #000;
+$tc: #666;
+$sp: 200px;  //  small post
+$mp: 400px;  //  medium post
+$lp: 600px;  //  large post
+$desktop: 1024px;
+$smallDesktop: 960px;
+$tablet: 728px;
+$largePhone: 568px;
+$mediumPhone: 414px;
+$smallPhone: 320px;
+
+//  structure
+
+body{
+	font-family: $bf;
+	background: $pc;
+	color: $sc;
+	font-size: 14px;
+	line-height: 1.6em;
+}
+
+//  header
+
+header{
+	width: 100%;
+	height: 500px;
+	@media all and (max-height: 800px) {
+		height: 300px;
+	}
+	h1{
+		font-family: $hf;
+		font-weight: bold;
+		font-size: 150px;
+		letter-spacing:10px;
+		line-height: 200px;
+		text-align: center;
+		margin: 0;
+		padding: 60px 0 0 0;
+		@media all and (max-width: $smallDesktop) {
+			font-size: 100px;
+			line-height: 150px;
+			padding: 100px 0 0 0;
+		}
+		@media all and (max-width: $tablet) {
+			font-size: 75px;
+			line-height: 125px;
+			padding: 160px 0 0 0;
+		}
+		@media all and (max-width: $largePhone) {
+			font-size: 50px;
+			line-height: 75px;
+			padding: 200px 0 0 0;
+		}
+	}
+	h1:hover{
+		animation-name: colorStrobe;
+		animation-duration: 2s;
+		animation-timing-function: step-start;
+		animation-iteration-count: infinite;
+	}
+	@keyframes colorStrobe{
+		0%   { color: #ca2756; }
+		25%  { color: #ec662f; }
+		50%  { color: #eda928; }
+		75%  { color: #229bfc; }
+		100% { color: #666666; }
+	}
+}
+
+//  menu
+
+#menu-btn{
+	position: fixed;
+	top: 40px;
+	left: 40px;
+	font-family: $hf;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 4px;
+	cursor: pointer;
+	text-shadow: 1px 1px 0px #fff;
+	z-index: 999;
+}
+
+aside{
+	width: 320px;
+	position: fixed;
+	top: 120px;
+	left: -320px;
+	z-index: 999;
+	transition: all 0.6s;
+	nav{
+		a{
+			font-family: $hf;
+			font-size: 18px;
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: 2px;
+			display: block;
+			margin: 0;
+			padding: 0 0 40px 40px;
+			color: $sc;
+			text-decoration: none;
+		}
+	}
+}
+
+.active{ left: 0 !important; }
+
+//  main
+
+#large-caption{
+	position: fixed;
+	z-index: 999;
+	left: 50px;
+	bottom: 50px;
+	font-family: $hf;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 50px;
+	padding: 0;
+	margin: 0;
+	letter-spacing:2px;
+	color: red;
+	p{
+		text-align: right;
+		padding: 0;
+		margin: 0;
+	}
+	@media all and (max-width: $tablet) {
+		display: none;
+	}
+}
+
+#tooltip{
+    position: fixed;
+    width: 250px;
+    //padding: 4px;
+    margin: 0;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.2s;
+    //box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+	z-index: 600;
+	img{
+		max-width: 100%;
+		display: block;
+	}
+}
+
+.show{ opacity: 1 !important; }
+
+#close{
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	cursor: pointer;
+	.line{
+		width: 4px;
+		height: 30px;
+		position: absolute;
+		background: $sc;
+	}
+	.line-1{
+		top: 0;
+		left: 15px;
+		transform: rotate(45deg);
+	}
+	.line-2{
+		top: 0;
+		left: 15px;
+		transform: rotate(-45deg);
+	}
+}
+
+main{
+	width: calc(100% - 80px);
+	margin: 20px 40px 0 40px;
+	article.post{
+		opacity: 0;
+		transition: opacity 0.6s;
+		margin-bottom: 50px;
+		z-index: 499;
+		width: $sp;
+		.like_button, .reblog_button{
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			left: 20px;
+			bottom: 20px;
+			opacity: 0;
+			transition: opacity 0.5s;
+		}
+		.reblog_button{
+			left: 60px;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	article.post:hover{
+		.like_button, .reblog_button{
+			opacity: 1;
+		}
+	}
+	article.quote{
+		z-index: 500;
+		.like_button, .reblog_button{
+			right: 20px;
+			left: auto;
+		}
+		.reblog_button{
+			right: 60px;
+			left: auto;
+		}
+	}
+	article.permalink-post{
+		margin: 10% auto 40px auto;
+		img{
+			width: 100%;
+		}
+	}
+	article.quote{
+		font-family: $hf;
+		color: red;
+		font-size: 32px;
+		line-height: 1.4em;
+		.source{
+			font-family: $bf;
+			color: $sc;
+			font-size: 14px;
+			padding: 10px 0 0 0;
+		}
+	}
+	article.small {
+		width: $sp !important;
+		@media all and (max-width: $tablet) {
+			width: 100% !important;
+			padding: 0 10px;
+		}
+	}
+	article.medium {
+		width: $mp !important;
+		@media all and (max-width: $tablet) {
+			width: 100% !important;
+			padding: 0 10px;
+		}
+	}
+	article.large {
+		width: $lp !important;
+		@media all and (max-width: $tablet) {
+			width: 100% !important;
+			padding: 0 10px;
+		}
+	}
+	img.essentials17cursor { cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/ESSENTIALS.png), auto !important; }
+	img.llv17cursor { cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/LIPVELVET.png), auto !important; }
+	img.septshow17cursor {cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/SEPTEMBERSHOW.png), auto !important; }
+	img.febshow17cursor { cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/FEBCOLLECTION.png), auto !important; }
+	img.cateye17cursor { cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/CATEYE.png), auto !important; }
+	img.blushcursor { cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/BLUSH.png), auto !important; }
+	img.freshglowcursor { cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/FRESHGLOW18.png), auto !important; }
+	img.febshow18cursor { cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LARGEARROW/WANTCURSOR.png), auto !important; }
+	img.lipcrushcursor { cursor: url(https://assets.static.burberry.com/email/COMMON-LIBRARY/tumblr/LIPCRUSH3.png), auto !important; }
+}
+
+//  footer
+
+footer{
+	.pagination__next{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+	}
+}
