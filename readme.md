@@ -1,4 +1,4 @@
-# Burberry Beauty 2.0
+# Burbs Beauty 2.0
 
 Built on the <a href="https://github.com/splorp/tersus-tumblr">Tersus Tumblr skeleton boilerplate theme</a>.
 
