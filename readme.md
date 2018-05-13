@@ -18,14 +18,6 @@ Gulp uses ```gulp-inject``` to add the compiled CSS and JS into the index file.
 
 This theme uses ```Masonry```, ```Draggabilly```, ```Images Loaded``` and ```Infifnite Scroll``` by <a href="https://desandro.com/">David Desandro</a>.
 
-#### Dev Account
-
-https://burberrybeautydev.tumblr.com/
-
-User: piers.rueb@burberry.com
-
-Pass: 1986-Mets
-
 ```
 
    |\          .(' *) ' .
